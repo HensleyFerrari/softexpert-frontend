@@ -7,7 +7,7 @@ import { CiSquarePlus } from "react-icons/ci";
 function Header() {
   return (
     <nav className="flex justify-between py-6 px-8 bg-blue-800 text-white">
-      <Link to="/">
+      <Link to="/" className="hidden md:block">
         <img src={SoftLogo} alt="SoftExpert Logo" className="h-10" />
       </Link>
       <div className="flex gap-4 self-center font-semibold">
