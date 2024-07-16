@@ -1,8 +1,28 @@
-# React + Vite
+# Desafio-Softexpert
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Como instalar o projeto
 
-Currently, two official plugins are available:
+Instale o [Node.js](https://nodejs.org/en/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Clone o projeto
+
+Instale as dependências
+
+```bash
+npm install
+```
+
+Rode o projeto
+
+```bash
+npm run dev
+```
+
+Acesse a url `http://localhost:5173`
+
+O projeto conta com as telas
+
+- Home
+- Cadastro de Produtos
+- Cadastro de Tipos de Produtos
+- Carrinho
