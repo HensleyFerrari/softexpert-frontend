@@ -50,9 +50,9 @@ function CreateProduct() {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center gap-4">
-      <div className="w-96 flex flex-col items-center justify-center gap-4">
-        <h1 className="text-center text-3xl font-semibold">
+    <div className="flex items-center justify-center gap-4">
+      <div className="w-96">
+        <h1 className="text-center text-3xl font-semibold mb-4">
           Cadastrar Produto
         </h1>
         <div className="flex flex-col gap-4">
@@ -106,10 +106,14 @@ function CreateProduct() {
             </select>
           </div>
           <div className="flex flex-col gap-2">
-            <span>Valor do produto: R$ {price ? price : null}</span>
+            <span>Valor do Produto: R$ {price ? parseInt(price).toFixed(2) : null}</span>
             <span>
               Valor do Imposto: R${" "}
               {price && tax ? ((price * tax) / 100).toFixed(2) : null}
+            </span>
+            <span className="text-sm text-gray-400">
+              * O valor do imposto será convertido automaticamente para o valor
+              em reais na página de carrinho
             </span>
           </div>
           <div className="flex justify-end">

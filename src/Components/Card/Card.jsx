@@ -5,7 +5,6 @@ import { toast } from "react-toastify";
 import { FaCartPlus } from "react-icons/fa6";
 import { GoGear } from "react-icons/go";
 
-
 function Card({ name, description, price, id, type }) {
   const { dispatch } = useContext(CartContext);
 
@@ -25,18 +24,20 @@ function Card({ name, description, price, id, type }) {
   };
 
   return (
-    <div className="flex flex-col gap-4 rounded-lg border bg-white shadow-md p-4 hover:bg-gray-50">
+    <div className="flex flex-col gap-4 rounded-lg bg-white  p-4">
       <div className="flex justify-between">
         <span className="self-center text-xl font-bold">{name}</span>
       </div>
-      <p className="text-gray-600">{description}</p>
+      <p className="bg-slate-200 p-4 rounded-md ">
+        {description}
+      </p>
       <p className="text-2xl font-bold">R$ {price}</p>
       <div className="flex justify-between">
         <Link
           to={`/product/${id}`}
           className="bg-gray-200 hover:bg-gray-300 font-bold py-2 px-4 rounded flex gap-2"
         >
-          <GoGear  className="self-center" /> <span>Editar Produto</span>
+          <GoGear className="self-center" /> <span>Editar Produto</span>
         </Link>
         <button
           onClick={addItemToCart}
