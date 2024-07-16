@@ -3,6 +3,8 @@ import { useContext } from "react";
 import { CartContext } from "../../store/CartContext";
 import { toast } from "react-toastify";
 import { FaCartPlus } from "react-icons/fa6";
+import { GoGear } from "react-icons/go";
+
 
 function Card({ name, description, price, id, type }) {
   const { dispatch } = useContext(CartContext);
@@ -23,24 +25,25 @@ function Card({ name, description, price, id, type }) {
   };
 
   return (
-    <div className="flex flex-col gap-2 rounded-lg border border-gray-200 shadow-md p-4 hover:bg-gray-100">
+    <div className="flex flex-col gap-4 rounded-lg border bg-white shadow-md p-4 hover:bg-gray-50">
       <div className="flex justify-between">
         <span className="self-center text-xl font-bold">{name}</span>
-        <Link
-          to={`/product/${id}`}
-          className="bg-gray-200 hover:bg-gray-300 font-bold py-2 px-4 rounded"
-        >
-          Editar Produto
-        </Link>
       </div>
       <p className="text-gray-600">{description}</p>
       <p className="text-2xl font-bold">R$ {price}</p>
       <div className="flex justify-between">
+        <Link
+          to={`/product/${id}`}
+          className="bg-gray-200 hover:bg-gray-300 font-bold py-2 px-4 rounded flex gap-2"
+        >
+          <GoGear  className="self-center" /> <span>Editar Produto</span>
+        </Link>
         <button
           onClick={addItemToCart}
           className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded flex gap-2"
         >
-          <FaCartPlus className="self-center" /> <span>Adicionar</span>
+          <FaCartPlus size={20} className="self-center" />{" "}
+          <span>Adicionar</span>
         </button>
       </div>
     </div>

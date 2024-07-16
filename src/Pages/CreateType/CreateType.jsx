@@ -27,43 +27,47 @@ export default function CreateType() {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center gap-4">
-      <h1 className="text-center text-2xl font-semibold">Cadastrar Tipo de Produto</h1>
-      <div className="flex flex-col gap-4">
-        <div className="flex flex-col gap-2">
-          <span>Nome do tipo</span>
-          <input
-            className="py-2 px-4 rounded-md"
-            type="text"
-            placeholder="Nome do tipo"
-            onChange={(e) => setName(e.target.value)}
-            value={name}
-          />
-        </div>
-        <div className="flex flex-col gap-2">
-          <span>
-            Valor do imposto em %<span className="text-red-500">*</span>{" "}
-          </span>
-          <input
-            className="py-2 px-4 rounded-md"
-            type="number"
-            placeholder="Valor do imposto em %"
-            min="0"
-            max="100"
-            onChange={(e) => setTax(e.target.value)}
-          />
-          <span className="text-sm text-gray-400">
-            * O valor do imposto será convertido automaticamente para o valor em
-            reais na página de produtos
-          </span>
-        </div>
-        <div className="flex justify-end">
-          <button
-            onClick={handleSubmit}
-            className="py-2 px-4 rounded-md bg-blue-500 text-white"
-          >
-            Salvar
-          </button>
+    <div className="flex  items-center justify-center gap-4">
+      <div className="w-96 flex flex-col items-center justify-center gap-4">
+        <h1 className="text-center text-3xl font-semibold">
+          Cadastrar Tipo de Produto
+        </h1>
+        <div className="flex flex-col gap-4">
+          <div className="flex flex-col gap-2">
+            <span>Nome do tipo</span>
+            <input
+              className="py-2 px-4 rounded-md"
+              type="text"
+              placeholder="Nome do tipo"
+              onChange={(e) => setName(e.target.value)}
+              value={name}
+            />
+          </div>
+          <div className="flex flex-col gap-2">
+            <span>
+              Valor do imposto em %<span className="text-red-500">*</span>{" "}
+            </span>
+            <input
+              className="py-2 px-4 rounded-md"
+              type="number"
+              placeholder="Valor do imposto em %"
+              min="0"
+              max="100"
+              onChange={(e) => setTax(e.target.value)}
+            />
+            <span className="text-sm text-gray-400">
+              * O valor do imposto será convertido automaticamente para o valor
+              em reais na página de produtos
+            </span>
+          </div>
+          <div className="flex justify-end">
+            <button
+              onClick={handleSubmit}
+              className="py-2 px-4 rounded-md bg-blue-500 text-white"
+            >
+              Salvar
+            </button>
+          </div>
         </div>
       </div>
     </div>
